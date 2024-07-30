@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void abrirSede(View v){
         Intent i;
-        i =  new Intent(this, SedeActivity.class);
+        i =  new Intent(this, MapsActivity.class);
         startActivity(i);
     }
     public void abrirPedido(View v){
