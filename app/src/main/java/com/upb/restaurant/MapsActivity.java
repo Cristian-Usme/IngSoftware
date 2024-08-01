@@ -57,6 +57,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(laureles).title("Sede principal"));
         mMap.addMarker(new MarkerOptions().position(centro).title("Sede la candelaria"));
         mMap.addMarker(new MarkerOptions().position(bello).title("Sede norte"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(medellin));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(medellin, 15));
+
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
     }
 }
