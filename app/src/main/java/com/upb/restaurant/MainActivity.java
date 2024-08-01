@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         i =  new Intent(this, MapsActivity.class);
         startActivity(i);
     }
+
     public void abrirPedido(View v){
         Intent i;
         i =  new Intent(this, PedidoActivity.class);
