@@ -2,6 +2,7 @@ package com.upb.restaurant;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
@@ -30,8 +31,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void abrirReserva(View v){
-        Intent i;
-        i =  new Intent(this, ReservaActivity.class);
+        String whatsApp = "com.whatsapp";
+        PackageManager pm = getPackageManager();
+        Intent i = pm.getLaunchIntentForPackage(whatsApp);
         startActivity(i);
     }
 }
