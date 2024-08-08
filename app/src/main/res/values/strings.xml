@@ -6,4 +6,16 @@
     <string name="app_pedido">Realiza tu pedido</string>
     <string name="title_activity_maps">MapsActivity</string>
 
+    <string name="entrada1">Sopas</string>
+    <string name="entrada2">Empanadas</string>
+    <string name="entrada3">Paracones</string>
+
+    <string name="ing_entrada1">Sancocho, Consome, Frijoles</string>
+    <string name="ing_entrada2">Carne, Pollo, Paisas</string>
+    <string name="ing_entrada3">Con hogao, Guacamole</string>
+
+    <string name="precio_entrada1">$ 10.000</string>
+    <string name="precio_entrada2">$ 8.000</string>
+    <string name="precio_entrada3">$ 12.000</string>
+
 </resources>

@@ -2,14 +2,16 @@ package com.upb.restaurant;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private String [] categoriasProductos = new String[]{"Entrada","Plato Fuerte", "Bebida", "Postre"};
+    private String [] categoriasProductos = new String[]{"Entrada","Plato Fuerte", "Bebida", "Postre", "Licores"};
     private ListView listaCategorias = null;
 
     private ListAdapter adaptadorLista = null;
@@ -27,4 +29,33 @@ public class MenuActivity extends AppCompatActivity {
 
     }
 
+    protected void onListItemClick (ListView lv, View v, int position, long id){
+
+        if(position == 0){
+            Intent i;
+            i =  new Intent(this, ProductoActivity.class);
+            startActivity(i);
+        }
+        if(position == 1){
+            Intent i;
+            i =  new Intent(this, ProductoActivity.class);
+            startActivity(i);
+        }
+        if(position == 2){
+            Intent i;
+            i =  new Intent(this, ProductoActivity.class);
+            startActivity(i);
+        }
+        if(position == 3){
+            Intent i;
+            i =  new Intent(this, ProductoActivity.class);
+            startActivity(i);
+        }
+        if(position == 4){
+            Intent i;
+            i =  new Intent(this, ProductoActivity.class);
+            startActivity(i);
+        }
+
+    }
 }
