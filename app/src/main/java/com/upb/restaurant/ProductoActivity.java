@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ListActivity;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -92,9 +95,31 @@ public class ProductoActivity extends ListActivity{
         }
 
         @Override
-        public View getView(int arg, View arg1, ViewGroup arg2){
+        public View getView(int position, View vista, ViewGroup arg2){
 
-            return null;
+            View view = null;
+
+            if(vista == null){
+                LayoutInflater inflater = (LayoutInflater) myContexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                view = inflater.inflate(R.layout.activity_producto, null);
+            }else{
+
+                view = vista;
+            }
+
+            ImageView imgProducto = (ImageView) view.findViewById(R.id.imageViewProducto);
+            imgProducto.setImageDrawable(myContexto.getResources().getDrawable(arregloProductos.get(position).imagenProducto));
+
+            TextView nombreProducto = (TextView) view.findViewById(R.id.textViewNombreProducto);
+            nombreProducto.setText(arregloProductos.get(position).nombreProducto);
+
+            TextView ingredientesProducto = (TextView) view.findViewById(R.id.textViewIngredientes);
+            ingredientesProducto.setText(arregloProductos.get(position).ingredientesProducto);
+
+            TextView precioProducto = (TextView) view.findViewById(R.id.textViewPrecioProducto);
+            precioProducto.setText(arregloProductos.get(position).precioProducto);
+
+            return view;
 
         }
 
